@@ -1,0 +1,89 @@
+@import "@/styles/colors.scss";
+
+.patientDetails {
+    width: 100%;
+    padding: 90px 24px 20px 24px;
+    margin-bottom: 75px;
+    height: calc(100vh - 64px);
+    overflow: auto;
+
+    :global {
+        .pdp-title {
+            font-size: 28px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            font-weight: 400;
+            color: $primary-color
+        }
+
+        .pdp-label {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: $primary-color
+        }
+
+        .pdp-bio-container {
+            padding: 24px;
+            gap: 24px;
+            border-radius: 10px;
+            background: $text-color;
+            margin-bottom: 20px;
+            width: 100%;
+
+            .pdp-bio {
+                border-radius: 10px;
+                font-size: 16px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: relative;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            .bio-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-bottom: 24px;
+                flex: 1 0 calc(33.33% - 8px);
+                gap: 8px;
+
+                label {
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: $black-color;
+                }
+
+                p {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 18.75px;
+                    color: $bio-color;
+                }
+            }
+
+            .hr-spacing {
+                padding: 0px 24px;
+            }
+        }
+
+        .table-scroll {
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                height: 6px;
+                background: #B2B2B2;
+            }
+
+            &::-webkit-scrollbar-thumb,
+            &::-webkit-scrollbar-track {
+                background: #B2B2B2;
+            }
+        }
+
+    }
+}

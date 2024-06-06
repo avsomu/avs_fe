@@ -1,0 +1,21 @@
+@import "@/styles/colors.scss";
+
+.ptListsContainer {
+    padding: 64px 24px;
+    margin-top: 26px;
+    width: 100%;
+    font-family: inherit;
+    height: calc(100vh - 64px);
+    overflow: auto;
+
+    :global {
+        .listsTitle {
+            font-size: 28px;
+            line-height: 24px;
+            color: $primary-color;
+            padding-left: 10px;
+            font-family: "Neo Sans Std Regular";
+            font-style: normal;
+        }
+    }
+}

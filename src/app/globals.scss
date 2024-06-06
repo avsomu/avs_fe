@@ -1,0 +1,77 @@
+@import "../styles/colors.scss";
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../assests/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Neo Sans Std Regular";
+  src: url("../assests/fonts/Neo-Sans-Font/Neo\ Sans\ Std\ Regular.otf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto-Regular";
+}
+
+body {
+  background: $cancel-color;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  height: 3px;
+  width: 10px;
+}
+
+;
+
+::-webkit-scrollbar-thumb {
+  background: #B2B2B2;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.errorDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: $text-color;
+
+  :global {
+    .error-content {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .unauthor-page {
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}
+
+.signIn-AD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+
+  .sign-Azure {
+    display: flex;
+    height: 40px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: $text-color;
+    background: $primary-color;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,160 @@
+@import "@/styles/colors.scss";
+
+.buttonWrapper {
+    border: none;
+    gap: 10px;
+
+    :global {
+
+        .idgPLists,
+        .recertBtn,
+        .disBtn {
+            border-radius: 5px;
+            padding: 5px 10px;
+            background: $seconday-color;
+            color: $text-color;
+            border: none;
+            width: 130px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18.75px;
+            height: 29px;
+            cursor: pointer;
+        }
+
+        .recertBtn {
+            background: $recert-color;
+        }
+
+        .disBtn {
+            background: $disable-color;
+            ;
+        }
+
+        .backBtn {
+            display: flex;
+            height: 40px;
+            padding: 10px 50px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            background: $gray-color;
+            border: none;
+            color: $primary-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        .idgBtn {
+            display: flex;
+            height: 40px;
+            padding: 10px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            color: $text-color;
+            background: $primary-color;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .editBtn,
+        .copyBtn,
+        .copyBtnDisable {
+            display: flex;
+            width: 140px;
+            height: 40px;
+            padding: 10px 50px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            color: $text-color;
+            border: none;
+            font-size: 16px;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .editBtn {
+            background: $seconday-color;
+        }
+
+        .copyBtn {
+            background: $primary-color;
+        }
+
+        .copyBtnDisable {
+            opacity: 0.5;
+            background: $primary-color;
+        }
+
+        .cancel-btn-transfer {
+            width: 120px;
+            height: 40px;
+            padding: 10px 50px;
+            border-radius: 5px;
+            background: $cancel-color;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .btn-transfer {
+            width: 120px;
+            height: 40px;
+            padding: 10px 20px;
+            color: $text-color;
+            border-radius: 5px;
+            background: $primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .btn-transfer:disabled {
+            opacity: 0.8;
+        }
+
+        .ok-btn-transfer {
+            display: flex;
+            width: 80px;
+            height: 40px;
+            padding: 10px 50px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            background: $primary-color;
+            color: $text-color;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .homeBtn {
+            display: flex;
+            height: 34px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: $sticky-th-color;
+            width: 120px;
+            border: 0;
+            cursor: pointer;
+        }
+    }
+}

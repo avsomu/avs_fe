@@ -1,0 +1,170 @@
+@import "@/styles/colors.scss";
+
+.tableScrollable {
+    width: 100%;
+    background: $text-color;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 16px;
+    padding: 26px 24px;
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+
+    :global {
+        .thead-flex-box {
+            background: $thead-color;
+        }
+
+        .firstTh {
+            background-color: $text-color;
+            width: 20%;
+            border-top-left-radius: 10px;
+        }
+
+        th {
+            padding: 7px 16px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        td {
+            color: $pd-table-cell-color;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px;
+            padding: 7px 16px;
+        }
+
+        .stickey-th {
+            display: flex;
+            height: 50.271px;
+            align-items: center;
+            flex-shrink: 0;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            padding-bottom: 7px;
+        }
+
+        tr td:first-child {
+            background-color: $sticky-th-color;
+        }
+
+        .td-initial-child {
+            background: $hr-color;
+            height: 1px;
+        }
+
+        thead {
+            th {
+                background: $thead-color;
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 24px;
+                border: none;
+            }
+
+            .firstTh:first-child {
+                background-color: $text-color;
+            }
+
+            .scroll-th {
+                padding: 16px;
+                width: 220px;
+            }
+
+            .first-th {
+                width: 160px;
+            }
+        }
+
+        tbody {
+            th {
+                background: $sticky-th-color;
+
+                &:first-child() {
+                    width: 20%;
+                }
+            }
+
+            .scroll-td {
+                padding: 0 16px;
+                width: 220px;
+            }
+
+            .stickey-th {
+                height: 51px;
+                display: flex;
+                align-items: center;
+                text-align: left;
+                width: 160px;
+                font-size: 16px;
+                white-space: normal;
+            }
+
+            .th-vital {
+                height: auto;
+            }
+
+            .vital-key {
+                position: relative;
+                box-shadow: 3px 0px 6px 1px #0000001A;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 90%;
+                    margin: auto;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-bottom: 1px solid #BAD1F1;
+                }
+            }
+
+            .border-td {
+                border-bottom: 1px solid #ECECEC;
+
+                &:nth-child(2),
+                &:last-child {
+                    border: none;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 90%;
+                        margin: auto;
+                        bottom: 0;
+                        border-bottom: 1px solid #ECECEC;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        right: 0;
+                    }
+                }
+
+                &:last-child {
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        & th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+        }
+    }
+}

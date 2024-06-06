@@ -1,0 +1,80 @@
+@import "@/styles/colors.scss";
+
+.hiddenFooter {
+    display: none;
+}
+
+.footerContainer {
+    bottom: 0;
+    height: 69px;
+    background: $text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 23px 16px 23px;
+    z-index: 6;
+    position: fixed;
+    width: 100%;
+
+    :global {
+        .idg-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feed-flex-box {
+            display: inline-flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+
+            .share-feedback {
+                color: $black-color;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+
+            .like-feed-box,
+            .unlike-feed-box {
+                width: 24px;
+                height: 24px;
+                border-radius: 100px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+
+                .like-icon {
+                    width: 16px;
+                    height: 16.478px;
+                    cursor: pointer;
+                }
+
+                .unlike-icon {
+                    width: 18px;
+                    height: 15.262px;
+                    cursor: pointer;
+                }
+            }
+
+            .like-feed-box {
+                background: $primary-color;
+            }
+
+            .unlike-feed-box {
+                background: $unlike-color;
+            }
+        }
+
+        .empty-container {
+            width: 140px;
+        }
+    }
+
+
+}

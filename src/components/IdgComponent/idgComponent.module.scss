@@ -1,0 +1,85 @@
+@import "@/styles/colors.scss";
+
+.idgContainer {
+    width: 100%;
+    font-family: inherit;
+    padding: 0px 24px;
+    margin-bottom: 75px;
+    height: calc(100vh - 64px);
+    overflow: auto;
+
+    :global {
+        .idg-label {
+            font-size: 28px;
+            padding-top: 92px;
+            padding-bottom: 20px;
+            color:$primary-color;
+        }
+
+        .idg-report {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 22px;
+        }
+
+        .idg-sp-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: $primary-color
+        }
+
+        .idg-report-type {
+            font-size: 16px;
+            text-align: right;
+            color: $primary-color
+        }
+
+        .idg-bio {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+            gap: 30px;
+            align-items: flex-start;
+            background: $text-color;
+            border-radius: 10px;
+        }
+
+        .idg-bio-flex {
+            height: 60px;
+            font-size: 16px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: center;
+            white-space: nowrap;
+            flex: 1;
+
+            label {
+                color: $primary-color;
+                padding-bottom: 8px;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            p {
+                color: $bio-color;
+            }
+
+            input {
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid #D0CFCF;
+                padding: 8px;
+            }
+
+            input:focus,
+            input {
+                outline: none;
+                background: $gray-color;
+            }
+        }
+    }
+}

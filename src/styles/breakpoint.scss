@@ -1,0 +1,19 @@
+@mixin responsive($breakpoint) {
+    @if($breakpoint == tab) {
+        @media (min-width:768px) and (max-width:1023px) {
+            @content;
+        }
+    }
+
+    @if($breakpoint == mobile) {
+        @media (max-width:767px) {
+            @content;
+        }
+    }
+
+    @else if($breakpoint == desktop) {
+        @media (min-width:1024) {
+            @content;
+        }
+    }
+}

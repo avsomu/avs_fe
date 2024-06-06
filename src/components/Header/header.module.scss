@@ -1,0 +1,95 @@
+@import "@/styles/colors.scss";
+
+.headerDiv {
+    width: 100%;
+    height: 64px;
+    background: $text-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 36px;
+    position: fixed;
+    top: 0;
+    font-family: inherit;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+    z-index: 6;
+
+    :global {
+        .headerImg {
+            width: 108.22px;
+            height: 48px;
+        }
+
+        .homeSection {
+            display: flex;
+            justify-content: flex-start;
+            gap: 50px;
+        }
+
+        .profileDiv {
+            gap: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            p {
+                font-size: 16px;
+                line-height: 18.75px;
+                margin: 0;
+                color: $primary-color
+            }
+
+            .profileImage {
+                width: 23px;
+                height: 23px;
+            }
+
+            .userImg {
+                background: $seconday-color;
+                padding: 4px 6px;
+                border-radius: 50% 50%;
+            }
+
+            .profileHidden {
+                display: none;
+            }
+
+            .logout-section {
+                position: absolute;
+                border-radius: 5px;
+                height: 40px;
+                top: 46px;
+                width: 129px;
+                background: $text-color;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+
+                p {
+                    font-size: 14px;
+                }
+
+                &::after {
+                    left: 83%;
+                    bottom: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-bottom-color: $text-color;
+                    border-width: 5px;
+                }
+            }
+
+            .left-bar {
+                margin-right: 10px;
+            }
+        }
+    }
+}
